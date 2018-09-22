@@ -23,6 +23,7 @@ public interface ProductService {
 	StorageResult getProductByExample(List<CustomOrder> jsonToList);
 	StorageResult getStockReminder();
 	StorageResult updateProduct(CustomProduct product);
+	List<Product> getBestSellingProductByCategory(Integer categoryId);
 
 
 
