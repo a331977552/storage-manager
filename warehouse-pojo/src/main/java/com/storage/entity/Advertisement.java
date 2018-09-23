@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 import lombok.Data;
 import lombok.ToString;
@@ -13,20 +12,24 @@ import lombok.ToString;
 @Entity
 @Data
 @ToString
-public class SellingRecord {
+public class Advertisement {
 
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-
-	@OneToOne()
-	private Product product;
+	@Column
+	private String message;
 	
-	@Column()
-	private Integer sellingAmount;
+	@Column
+	private String imgUrl;
 	
-	@Column()
-	private Integer returnedAmount;
+	@Column
+	private String clickUrl;
 	
+	@Column
+	//1 means top
+	//2 means left
+	private  Integer position;
 	
 }

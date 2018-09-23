@@ -7,7 +7,7 @@ import com.storage.entity.FeedBack;
 
 public interface FeedBackService {
 
-	FeedBack addOrUpdate(FeedBack back);
+	Optional<FeedBack> addOrUpdate(FeedBack back);
 	void deleteById(Integer id);
 	List<FeedBack> getAll();
 	

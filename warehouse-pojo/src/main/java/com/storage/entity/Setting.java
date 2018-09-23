@@ -8,9 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Data
+@ToString
 public class Setting  implements Serializable{
     /**
 	 * 
@@ -27,6 +29,9 @@ public class Setting  implements Serializable{
     private String postcode;
 
     private String phone;
+    //1 means pounds
+    //2 means rmb
+    private Integer currencyDisplay;
 
     private String name;
 
@@ -35,7 +40,8 @@ public class Setting  implements Serializable{
 
     private String apliPayUrl;
     private String wxPayUrl;
-  
+    private String managerWeChatUrl;
+    private String managerWeChatId;
     
     private Float currencyRate;
   

@@ -19,6 +19,6 @@ public interface StOrderService {
 	OrderWrap creaOrder(Customer customer, OrderWrap result);
 	StorageResult<List<OrderTableItem>> findAllTableItems();
 	OrderWrap getInfoFromOrder(Integer orderId);
-
+	StorageResult<List<OrderTableItem>> findAllTableItemsByUserId(Integer Id);
 
 }
