@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.storage.entity.Customer;
 import com.storage.entity.StOrder;
+import com.storage.entity.custom.OrderStatis;
 import com.storage.entity.custom.OrderTableItem;
 import com.storage.entity.custom.OrderWrap;
 import com.storage.entity.custom.StorageResult;
@@ -20,5 +21,6 @@ public interface StOrderService {
 	StorageResult<List<OrderTableItem>> findAllTableItems();
 	OrderWrap getInfoFromOrder(Integer orderId);
 	StorageResult<List<OrderTableItem>> findAllTableItemsByUserId(Integer Id);
-
+	OrderStatis getStatistics();
+	
 }

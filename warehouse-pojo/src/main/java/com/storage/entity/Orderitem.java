@@ -1,6 +1,7 @@
 package com.storage.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,9 +27,9 @@ public class Orderitem  implements Serializable{
 
     private Integer quantity;
 
-    private Integer unitprice;
+    private BigDecimal unitprice;
 
-    private Integer totalprice;
+    private BigDecimal totalprice;
 
     private String pic;
     private String productName;

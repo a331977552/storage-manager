@@ -1,6 +1,7 @@
 package com.storage.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -29,7 +30,7 @@ public class StOrder  implements Serializable{
 
     private Integer status;
 
-    private Integer totalprice;
+    private BigDecimal totalprice;
     
     private Integer shippingfee;
 

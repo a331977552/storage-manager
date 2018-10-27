@@ -1,6 +1,7 @@
 package com.storage.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -34,9 +35,11 @@ public  class Product  implements Serializable{
 	@Transient
 	private Integer product_warning_quantity;
 
-	private Integer buyingprice;
+	private BigDecimal buyingprice;
 
-	private Integer sellingprice;
+	private BigDecimal sellingprice;
+	private BigDecimal sellingprice_aftertax;
+	
 	private Integer category;
 
 	private String title;
@@ -54,9 +57,11 @@ public  class Product  implements Serializable{
 	private String sort_order;
 	
 	@Transient
-	private Float buyingprice_;
+	private BigDecimal buyingprice_;
 	@Transient
-	private Float sellingprice_;
+	private BigDecimal sellingprice_;
+	@Transient
+	private String moneyDisplayed;
 	
 	@Transient
 	private String content;

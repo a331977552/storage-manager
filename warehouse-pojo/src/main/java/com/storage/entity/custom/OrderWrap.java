@@ -1,6 +1,7 @@
 package com.storage.entity.custom;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,8 @@ public class OrderWrap  implements Serializable{
 	 */
 	private static final long serialVersionUID = -3852296541265907283L;
 	private List<CustomProduct> list;
-	private double totalPrice;
+	private BigDecimal totalPrice;
+	private String totalPriceDisplay;
 	private Date date;
 	private StOrder order;
 	private Customer customer;

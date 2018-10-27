@@ -1,5 +1,6 @@
 package com.storage.entity.custom;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.storage.entity.Product;
@@ -15,7 +16,8 @@ public class CustomProduct {
 	private Product product;
 	private List<Productimg> imgs;
 	private Integer qty;
-	private double subtotal;
+	private BigDecimal subtotal;
+	private String subtotalDisplayed;
 	
 
 
