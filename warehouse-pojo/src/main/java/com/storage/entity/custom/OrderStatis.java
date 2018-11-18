@@ -13,5 +13,6 @@ public class OrderStatis {
 	private long   dispatched;
 	private long   finished;
 	private long   closed;
+	private long canceled;
 
 }
