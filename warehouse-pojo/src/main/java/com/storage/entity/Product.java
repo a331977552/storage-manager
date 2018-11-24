@@ -3,12 +3,17 @@ package com.storage.entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -38,7 +43,9 @@ public  class Product  implements Serializable{
 	private Integer product_warning_quantity;
 
 	private BigDecimal buyingprice;
-
+	
+	
+	
 	/**
 	 * 实际想卖多少
 	 */
@@ -116,14 +123,18 @@ public  class Product  implements Serializable{
 	@Column(updatable = false)
 	@CreationTimestamp
 	private Date createdtime;
+	
 	@Temporal(TemporalType.TIMESTAMP)
-
 	@org.hibernate.annotations.UpdateTimestamp
 	private Date updatetime;
 
 	@NotNull
 	private String barcode;
 
+	
+	@ManyToMany(fetch=FetchType.EAGER)
+    @JoinTable(name="product_optionalSearch",joinColumns={@JoinColumn(name="product_id")},inverseJoinColumns={@JoinColumn(name="optional_id")})
+	private Set<OptionalSearch> optionalSearch;
 
 
 }

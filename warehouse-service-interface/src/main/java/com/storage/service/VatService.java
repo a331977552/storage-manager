@@ -12,7 +12,7 @@ public interface VatService {
 	StorageResult<List<Vat>> getVatByExample(Vat  vat );
 	StorageResult getVatById(Integer id);
 	StorageResult updateVatSelective(Vat vat );
-	StorageResult count();
+	StorageResult<Long> count();
 	StorageResult findAll();
 
 

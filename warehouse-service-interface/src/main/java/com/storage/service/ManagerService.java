@@ -10,7 +10,7 @@ public interface ManagerService {
 	StorageResult getManagerByExample(Manager  manager );
 	StorageResult getManagerById(Integer id);
 	StorageResult updateManagerSelective(Manager manager );
-	StorageResult count();
+	StorageResult<Long> count();
 	StorageResult login(Manager manager);
 	StorageResult<Manager> getOne();
 

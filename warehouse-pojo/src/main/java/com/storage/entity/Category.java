@@ -8,13 +8,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.ToString;
@@ -33,12 +34,20 @@ public class Category implements Serializable {
 	private Integer id;
 
 	@NotNull
-	private String name;
-
-	@ManyToOne()
-	private Category parent;
-
-    @OneToMany(mappedBy="parent")
+	@Column(name="name")
+	private String text;
+	
+	@JsonIgnore
+//	@ManyToOne(fetch=FetchType.LAZY)
+	@Transient
+	private Category parentObj;
+	
+	@Column(name="parent_id")
+	private Integer parent;
+	
+	@JsonIgnore
+//    @OneToMany(mappedBy="parent")
+	@Transient
     private Set<Category> children;
 	
 	@Temporal(TemporalType.TIMESTAMP)

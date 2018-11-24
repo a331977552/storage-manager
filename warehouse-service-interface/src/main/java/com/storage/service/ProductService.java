@@ -8,6 +8,8 @@ import com.storage.entity.custom.CustomProduct;
 import com.storage.entity.custom.StorageResult;
 
 public interface ProductService {
+	public static final Integer PRODUCT_DELETE = 1;
+	public static final Integer PRODUCT_NORNAL = 2;
 	StorageResult addProduct(CustomProduct product );
 	StorageResult addProduct(Product product );
 	StorageResult updateProduct(Product product );

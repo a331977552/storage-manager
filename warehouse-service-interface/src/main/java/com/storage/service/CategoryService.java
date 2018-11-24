@@ -15,11 +15,13 @@ public interface CategoryService {
 	StorageResult<Category>  updateCategory(Category category);
 
 	StorageResult  deleteCategoryById(Integer id);
-	StorageResult<List<Category>>  findAll();
+	List<Category>  findAll();
 	StorageResult<List<Category>>  getCategoryByExample(Category  category );
 	StorageResult<Category>  getCategoryById(Integer id);
 	StorageResult<Category>  updateCategorySelective(Category category );
 	StorageResult<Long>  count();
+
+	StorageResult updateCategories(List<Category> categories);
 
 
 

@@ -10,7 +10,7 @@ public interface SettingService {
 	StorageResult getSettingByExample(Setting  setting );
 	StorageResult getSettingById(Integer id);
 	StorageResult updateSettingSelective(Setting setting );
-	StorageResult count();
+	StorageResult<Long> count();
 	StorageResult<Setting> getSetting();
 
 

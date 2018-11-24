@@ -10,6 +10,6 @@ public class ProductDetail {
 	
 	private Product product;
 	private List<Productimg> imgs;
-	private List<Category> categories;
+	private Category category;
 	private List<Vat> vats;	
 }
